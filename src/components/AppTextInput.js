@@ -4,7 +4,7 @@ import defaultStyles from "../config/styles";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 const AppTextInput = ({ icon, placeholder, ...otherProps }) => {
-  console.log("Placeholder:", placeholder);
+  console.log("Placeholder:", icon);
 
   return (
     <View style={styles.container}>
@@ -18,7 +18,7 @@ const AppTextInput = ({ icon, placeholder, ...otherProps }) => {
       )}
       <TextInput
         style={[defaultStyles.text, styles.textInput]}
-        placeholder={{ placeholder }}
+        placeholder={placeholder}
         placeholderTextColor={defaultStyles.colors.medium}
         {...otherProps}
       />
@@ -37,6 +37,7 @@ const styles = StyleSheet.create({
     padding: 15,
     marginVertical: 10,
     alignItems: "center", // Ensure children are centered vertically
+    height: 50, //Give it height for this container
   },
   icon: {
     marginRight: 10,
